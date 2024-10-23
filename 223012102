@@ -1,0 +1,196 @@
+//Q1
+package com.mycompany.benit;
+import java.util.Scanner;
+
+   public class BENIT{
+    public static void main(String[] args) {
+        Scanner benit = new Scanner(System.in);  
+        System.out.print("Enter a number: ");
+        int num = benit.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println(num + " is an even number.");
+        } else {
+            System.out.println(num + " is an odd number.");
+        }
+    }
+}
+//Q2
+package com.mycompany.benit;
+import java.util.Scanner;
+
+public class GRADES{
+    public static void main(String[] args) {
+        Scanner benit = new Scanner(System.in);
+        System.out.print("Enter a grade (A, B, C, D, F): ");
+        char grade = benit.next().charAt(0);
+
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good job!");
+                break;
+            case 'C':
+                System.out.println("Well done!");
+                break;
+            case 'D':
+                System.out.println("Push Hard.");
+                break;
+            case 'F':
+                System.out.println("Hahaha.");
+                break;
+            default:
+                System.out.println("Invalid grade.");
+        }
+    }
+}
+//Q3
+package com.mycompany.benit;
+import java.util.Scanner;
+
+public class LEAPYEAR{
+    public static void main(String[] args) {
+        Scanner benit = new Scanner(System.in);
+        System.out.print("Enter a year: ");
+        int year = benit.nextInt();
+
+        if (year % 4 == 0){
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+    }
+}
+//Q4
+package com.mycompany.benit;
+import java.util.Scanner;
+
+public class LEAPYEAR{
+    public static void main(String[] args) {
+        Scanner benit = new Scanner(System.in);
+        System.out.print("Enter a year: ");
+        int year = benit.nextInt();
+
+        if (year % 4 == 0){
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+    }
+}
+//Q5
+package com.mycompany.benit;
+import java.util.Scanner;
+
+public class POSITIVE{
+    public static void main(String[] args) {
+        Scanner benit = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        double number = benit.nextDouble();
+        
+        if (number > 0) {
+            System.out.println("The number is positive.");
+        } else if (number < 0) {
+            System.out.println("The number is negative.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+    }
+}
+//Q6
+package com.mycompany.benit;
+public class TRIANGLEPATTERN {
+    public static void main(String[] args) {
+        int rows = 7;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+//Q7
+package com.mycompany.benit;
+public class DIAMONDSTARS{
+    public static void main(String[] args) {
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        System.out.print("Enter the number of rows for the rhombus: ");
+        int rows = scanner.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for (int i = rows - 1; i >= 1; i--) {
+            for (int j = rows; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+//Q8
+package com.mycompany.benit;
+public class ARRAY {
+        public static void main(String[] args) {
+        int[] numbers = {10, 12, 34, 23, 56, 78};
+        int sum = 0;
+        int index = 0;
+
+        while (index < numbers.length) {
+            sum = sum + numbers[index];
+            index++;
+        }
+
+        double average = (double) sum / numbers.length;
+        System.out.println("The average is: " + average);
+    }
+
+}
+//Q9
+package com.mycompany.benit;
+public class ARRAYREVERSE{
+    public static void main(String[] args) {
+        int[] numbers = {3, 4, 6, 1, 9, 7, 5, 8};
+        int length = numbers.length;
+        int[] reversedArray = new int[length];
+
+        for (int i = 0; i < length; i++) {
+            reversedArray[i] = numbers[length - 1 - i];
+        }
+
+        System.out.print("Reversed array: ");
+        for (int num : reversedArray) {
+            System.out.print(num + " ");
+        }
+    }
+}
+//Q10
+package com.mycompany.benit;
+public class LARGESTARRAY{
+    public static void main(String[] args) {
+        int[] numbers = {34, 23, 12, 45, 67, 89, 234, 26, 10, 30, 43};
+        int largest = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > largest) {
+                largest = numbers[i];
+            }
+        }
+
+        System.out.println("The largest element is: " + largest);
+    }
+}
